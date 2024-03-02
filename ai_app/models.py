@@ -30,7 +30,7 @@ class ImageElement(models.Model):
                     # process obraz with model requirements
                     img_array = preprocess_input(img_array)
 
-                    model = InceptionV3(weights='imagenent')
+                    model = InceptionV3(weights='imagenet')
                     predictions = model.predict(img_array)
                     decoded_predictions = decode_predictions(predictions, top=1)[0]
                     best_guess = decoded_predictions[0][1]
