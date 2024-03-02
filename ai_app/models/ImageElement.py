@@ -26,11 +26,11 @@ class ImageElement(models.Model):
                     # convert image to numpy array
                     img_array = tf_image.img_to_array(pill_image)
                     # extend numpy array with new dimension
-                    img_array = np.expand_dims(img_array, axis=())
+                    img_array = np.expand_dims(img_array, axis=0)
                     # process obraz with model requirements
                     img_array = preprocess_input(img_array)
 
-                    model = InceptionV3(weights='imagenent')
+                    model = InceptionV3(weights='imagenet')
                     predictions = model.predict(img_array)
                     decoded_predictions = decode_predictions(predictions, top=1)[0]
                     best_guess = decoded_predictions[0][1]

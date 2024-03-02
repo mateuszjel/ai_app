@@ -1,3 +1,6 @@
 __pycache__
 exporter.sh. 
 venv*
+.env
+medias
+mediaphoto

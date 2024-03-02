@@ -13,3 +13,7 @@ python manage.py runserver
 
 
 sudo apt-get install python3.10-dev python3.10-venv
+
+
+admin
+Qwerty2023
